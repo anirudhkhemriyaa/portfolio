@@ -4,4 +4,5 @@ pydantic
 pydantic-settings
 python-dotenv
 httpx
+fastapi-mail
 # Add more if needed (e.g., sqlalchemy, psycopg2-binary for database)
