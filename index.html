@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anirudha_Portfolio | Developer Terminal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#7b2ff7;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <!-- A and M intertwined design -->
+                        <path d="M 20 80 L 35 30 L 50 80 L 65 30 L 80 80" stroke="url(#logoGradient)" stroke-width="6"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="50" cy="50" r="35" stroke="url(#logoGradient)" stroke-width="3" fill="none"
+                            opacity="0.3" />
+                    </svg>
+                </div>
+                <span class="logo-text">ANI</span>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="control red"></span>
+                    <span class="control yellow"></span>
+                    <span class="control green"></span>
+                </div>
+                <div class="terminal-title">anirudh@portfolio: ~</div>
+            </div>
+            <div class="terminal-body">
+                <div class="hero-content">
+                    <div class="command-line"><span class="prompt">guest@portfolio:~$</span> <span class="typed-text">whoami</span></div>
+                    <div class="response-text">
+                        <h1 class="glitch" data-text="Anirudh Khemriya">Anirudh Khemriya</h1>
+                        <h2 class="subheading">Python Developer & AI Systems Builder</h2>
+                        <p class="value-prop">Building robust backends and scalable AI-driven applications.</p>
+                        <div class="status-info">
+                            <span class="status-item"><span class="label">STATUS:</span> <span class="value">Active</span></span>
+                            <span class="status-item"><span class="label">FOCUS:</span> <span class="value">NLP & Backend Systems</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <div class="cta-label">SELECT A COMMAND:</div>
+                        <div class="hero-buttons">
+                            <button class="terminal-btn" data-command="projects">[ Projects ]</button>
+                            <button class="terminal-btn" data-command="resume">[ Resume ]</button>
+                            <button class="terminal-btn" data-command="contact">[ Contact ]</button>
+                            <button class="terminal-btn" data-command="github">[ GitHub ]</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terminal Command Interface (Fixed at bottom) -->
+    <div id="terminal-interface" class="terminal-interface">
+        <div class="input-line">
+            <span class="prompt">guest@portfolio:~$</span>
+            <input type="text" id="terminal-input" placeholder="type 'help' for commands..." autocomplete="off" spellcheck="false">
+            <span class="cursor"></span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">About Me</div>
+                <h2>Turning Ideas Into Reality</h2>
+                <p class="section-description">Passionate about creating seamless user experiences and solving complex
+                    problems with elegant solutions.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--accent-primary);">Introduction
+                    </h3>
+                    <p> I’m a Computer Science undergraduate focused on backend development, automation, and system
+                        reliability. I enjoy building tools that solve real operational problems—especially repetitive
+                        tasks that quietly waste time.
+
+                        My work prioritizes functionality over polish: scalable backends, asynchronous processing, and
+                        clean, disciplined system design. My goal is simple: build systems that are useful, efficient,
+                        and honest about what they optimize for—time, reliability, and simplicity.</p>
+
+                    <h3
+                        style="font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1.5rem; color: var(--accent-primary);">
+                        Education</h3>
+                    <p><strong>Bachelor of Science in Computer Science</strong><br>
+                        ITM college , Gwalior | 2028 <br>
+                        Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems, Software
+                        Engineering</p>
+
+                    <!-- <p style="margin-top: 1rem;"><strong>Certifications</strong><br>
+                    • [Certification Name] - [Issuing Organization]<br>
+                    • [Certification Name] - [Issuing Organization]</p> -->
+
+                    <h3
+                        style="font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1.5rem; color: var(--accent-primary);">
+                        Professional Background</h3>
+                    <p>Throughout my career, I've worked on diverse projects ranging from responsive web applications to
+                        scalable backend systems. I'm experienced in collaborating with cross-functional teams and have
+                        a proven track record of delivering high-quality code on schedule. My approach combines
+                        technical expertise with creative problem-solving to build products that users love.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div style="font-size: 2rem;">⚛️</div>
+                        <h4>Python</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div style="font-size: 2rem;">🎨</div>
+                        <h4>Django</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div style="font-size: 2rem;">⚡</div>
+                        <h4>DjangoRestFramework</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div style="font-size: 2rem;">🗄️</div>
+                        <h4>RestAPI</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div style="font-size: 2rem;">☁️</div>
+                        <h4>Postgres</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div style="font-size: 2rem;">📱</div>
+                        <h4>Responsive Design</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">My Work</div>
+                <h2>Featured Projects</h2>
+                <p class="section-description">A showcase of my recent work across various domains and technologies.</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <span class="project-placeholder"></span>
+                        <img src="Screenshot 2025-12-20 161240.png" alt="Project Name">
+                    </div>
+                    <div class="project-content">
+                        <h3>AWM</h3>
+                        <p>AWM is an operations-first automation tool designed to reduce time spent on repetitive
+                            administrative tasks in institutes and small teams. The system focuses on automating
+                            workflows such as data import/export, bulk emailing, and email tracking,
+                            allowing users to handle routine operations efficiently with minimal manual intervention.
+                            To execute long-running and bulk tasks asynchronously.AWM is designed to evolve based on
+                            real operational pain points.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">Celery</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">Other Python modules</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="[GitHub URL]" class="project-btn btn-github" target="_blank">
+                                <span>GitHub</span>
+                                <span>→</span>
+                            </a>
+                            <a href="[Live Demo URL]" class="project-btn btn-demo" target="_blank">
+                                <span>Live Demo</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <span class="project-placeholder">🖼️</span>
+                        <!-- Replace with: <img src="your-screenshot.jpg" alt="Project Name"> -->
+                    </div>
+                    <div class="project-content">
+                        <h3>[Project Name 2]</h3>
+                        <p>[Brief description of the project - what it does, the problem it solves, and key features.
+                            Keep it concise and focused on the value it provides.]</p>
+                        <div class="project-tags">
+                            <span class="tag">[Tech 1]</span>
+                            <span class="tag">[Tech 2]</span>
+                            <span class="tag">[Tech 3]</span>
+                            <span class="tag">[Tech 4]</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="[GitHub URL]" class="project-btn btn-github" target="_blank">
+                                <span>GitHub</span>
+                                <span>→</span>
+                            </a>
+                            <a href="[Live Demo URL]" class="project-btn btn-demo" target="_blank">
+                                <span>Live Demo</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <span class="project-placeholder">🖼️</span>
+                        <!-- Replace with: <img src="your-screenshot.jpg" alt="Project Name"> -->
+                    </div>
+                    <div class="project-content">
+                        <h3>[Project Name 3]</h3>
+                        <p>[Brief description of the project - what it does, the problem it solves, and key features.
+                            Keep it concise and focused on the value it provides.]</p>
+                        <div class="project-tags">
+                            <span class="tag">[Tech 1]</span>
+                            <span class="tag">[Tech 2]</span>
+                            <span class="tag">[Tech 3]</span>
+                            <span class="tag">[Tech 4]</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="[GitHub URL]" class="project-btn btn-github" target="_blank">
+                                <span>GitHub</span>
+                                <span>→</span>
+                            </a>
+                            <a href="[Live Demo URL]" class="project-btn btn-demo" target="_blank">
+                                <span>Live Demo</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Get in Touch</div>
+                <h2>Let's Work Together</h2>
+                <p class="section-description">Have a project in mind? I'd love to hear about it. Send me a message and
+                    let's create something amazing.</p>
+            </div>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 [Your Name]. Crafted with passion and code.</p>
+    </footer>
+</body>
+
+</html>

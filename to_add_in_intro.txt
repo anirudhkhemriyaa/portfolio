@@ -1,0 +1,8 @@
+ I’ve built automation tools for institutes and small teams using Python, Django, Celery, and Redis, with an emphasis on performance, clarity, and long-term maintainability.
+
+I’m actively learning through hands-on projects, problem-solving, and experimentation with backend architectures.
+
+
+
+
+http://www.w3.org/2000/svg

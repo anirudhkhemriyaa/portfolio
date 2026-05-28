@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #0A0A0A;
+  --color-brand-secondary: #111111;
+  --color-brand-border: #1A1A1A;
+  --color-brand-text: #F5F5F5;
+  --color-brand-muted: #8B8B8B;
+  --color-brand-accent: #7DD3FC;
+  
+  --font-mono: "Geist Mono", "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text font-mono selection:bg-brand-accent/30 selection:text-brand-accent;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .terminal-card {
+    @apply bg-brand-secondary border border-brand-border rounded-lg p-6 hover:border-brand-accent/50 transition-all duration-300;
+  }
+  
+  .glass-panel {
+    @apply bg-brand-secondary/80 backdrop-blur-md border border-brand-border;
+  }
+  
+  .btn-terminal {
+    @apply px-4 py-2 border border-brand-border rounded hover:border-brand-accent hover:text-brand-accent transition-all duration-200 inline-flex items-center gap-2;
+  }
+}
+
+/* Custom animations */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-brand-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-border rounded-full hover:bg-brand-muted/30 transition-colors;
+}
