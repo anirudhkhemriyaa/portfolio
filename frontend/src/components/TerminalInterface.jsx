@@ -52,7 +52,7 @@ const TerminalInterface = () => {
         case 'resume':
           newHistory.push({ type: 'output', content: 'Downloading Anirudha__resume.pdf...' });
           const link = document.createElement('a');
-          link.href = '/resume.pdf';
+          link.href = '/Anirudh_resume.pdf';
           link.download = 'Anirudha_Khemriya_Resume.pdf';
           link.click();
           break;

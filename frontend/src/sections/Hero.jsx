@@ -87,7 +87,7 @@ const Hero = () => {
                     <a href="#projects" className="btn-terminal bg-brand-accent/5 text-brand-accent !border-brand-accent/30 hover:bg-brand-accent/10">
                       [ View Projects ] <ArrowRight size={16} />
                     </a>
-                    <a href="/resume.pdf" download className="btn-terminal">
+                    <a href="/Anirudh_resume.pdf" download className="btn-terminal">
                       [ Resume ] <Download size={16} />
                     </a>
                     <a href="#contact" className="btn-terminal">
