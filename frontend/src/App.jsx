@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import Projects from './sections/Projects';
@@ -7,12 +6,15 @@ import Experience from './sections/Experience';
 import About from './sections/About';
 import Contact from './sections/Contact';
 import TerminalInterface from './components/TerminalInterface';
+import { Atmosphere } from './components/shared';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
+    <div className="relative min-h-screen">
+      <Atmosphere className="fixed" />
+      <div className="relative z-10">
+        <Navbar />
+        <main>
         <Hero />
         <About />
         <Projects />
@@ -27,6 +29,7 @@ function App() {
         <p>&copy; {new Date().getFullYear()} Anirudha Khemriya. Crafted with passion and code.</p>
         <p className="mt-2 text-xs">v2.0.0-terminal-modernized</p>
       </footer>
+      </div>
     </div>
   );
 }

@@ -1,37 +1,24 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import TypingEffect from '../components/TypingEffect';
+import { BlinkingCursor, TerminalButton, TerminalWindow } from '../components/shared';
 
 const Hero = () => {
   return (
     <section id="home" className="pt-32 pb-20 px-4 min-h-screen flex flex-col justify-center max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-12">
-          {/* Terminal Window Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="w-full max-w-4xl mx-auto terminal-card overflow-hidden !p-0 shadow-2xl border-brand-border/50"
+            className="w-full max-w-4xl mx-auto"
           >
-            <div className="bg-brand-secondary border-b border-brand-border px-4 py-3 flex items-center justify-between">
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
-              </div>
-              <div className="text-xs text-brand-muted font-mono flex items-center gap-2">
-                <Terminal size={12} />
-                <span>~/portfolio -- zsh</span>
-              </div>
-              <div className="w-12"></div>
-            </div>
-
-            <div className="p-8 font-mono space-y-6">
+            <TerminalWindow title="~/portfolio -- zsh" ambientGlow>
+              <div className="p-8 font-mono space-y-6">
               <div className="space-y-2">
                 <div className="flex gap-2 text-brand-accent">
                   <span>guest@portfolio:~$</span>
-                  <TypingEffect text="booting portfolio..." delay={50} />
+                  <TypingEffect text="booting portfolio..." delay={50} /><BlinkingCursor />
                 </div>
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -84,15 +71,9 @@ const Hero = () => {
                   </p>
 
                   <div className="flex flex-wrap gap-4 pt-4">
-                    <a href="#projects" className="btn-terminal bg-brand-accent/5 text-brand-accent !border-brand-accent/30 hover:bg-brand-accent/10">
-                      [ View Projects ] <ArrowRight size={16} />
-                    </a>
-                    <a href="/Anirudh_resume.pdf" download className="btn-terminal">
-                      [ Resume ] <Download size={16} />
-                    </a>
-                    <a href="#contact" className="btn-terminal">
-                      [ Contact ]
-                    </a>
+                    <TerminalButton href="#projects" variant="primary">View Projects <ArrowRight size={16} /></TerminalButton>
+                    <TerminalButton href="/Anirudh_resume.pdf" download>Resume <Download size={16} /></TerminalButton>
+                    <TerminalButton href="#contact">Contact</TerminalButton>
                   </div>
                 </div>
 
@@ -107,7 +88,8 @@ const Hero = () => {
                   </div>
                 </div>
               </motion.div>
-            </div>
+              </div>
+            </TerminalWindow>
           </motion.div>
         </div>
       </div>

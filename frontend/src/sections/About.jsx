@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Brain, Zap, Target } from 'lucide-react';
+import { SectionHeading } from '../components/shared';
 
 const AboutFeature = ({ icon, title, description, delay = 0 }) => (
   <motion.div 
@@ -25,10 +26,7 @@ const About = () => {
     <section id="about" className="py-32 px-4 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
-          <h2 className="text-brand-accent font-mono text-sm mb-2 uppercase tracking-widest flex items-center gap-2">
-            <span className="w-8 h-[1px] bg-brand-accent/50"></span>
-            Profile
-          </h2>
+          <SectionHeading command="cat about.md" className="mb-4" />
           <h3 className="text-4xl font-bold font-mono mb-8">System Engineering Mindset</h3>
           
           <div className="space-y-6 text-brand-muted text-md leading-relaxed">
